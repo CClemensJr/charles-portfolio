@@ -9,11 +9,14 @@ class PortfoliosController < ApplicationController
 
   def new
     @portfolio_item = Portfolio.new
+    # Create 3 types of technologies and include in form
+    3.times { @portfolio_item.technologies.build }
   end
 
   def create
     @portfolio_item = Portfolio.new(params.require(:portfolio).
-                                    permit(:title, :subtitle, :body))
+                                    permit(:title, :subtitle, :body,
+                                                              technologies_attributes: [:name]))
 
     respond_to do |format|
       if @portfolio_item.save
