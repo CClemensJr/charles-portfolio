@@ -1,5 +1,6 @@
-<h1>Home Page</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<!--current_user is a devise method-->
+<h1><%= current_user.first_name if current_user %></h1>
+<p>This is you know where I chill and stuff. Thanks for being wit me</p>
 
 <h2>Blog Posts</h2>
 <%= @posts.inspect %>
