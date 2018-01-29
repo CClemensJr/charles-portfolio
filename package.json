@@ -1,5 +1,7 @@
 {
   "name": "CharleClemPortfolio",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "node-sass": "^4.7.2"
+  }
 }
