@@ -27,7 +27,7 @@
     <%= yield %>
 
     <!--Add a shoddy navbar to the site-->
-    <%= render "shared/nav" %>
+    <%= render "shared/nav", location: 'bottom' %>
 
     <% if session[:source] %>
       <p>Thanks for visiting me from <%= session[:source] %></p>

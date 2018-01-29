@@ -15,7 +15,7 @@
     <p class="alert"><%= alert %></p>
 
     <!--Add a shoddy navbar to the site-->
-    <%= render "shared/nav" %>
+    <%= render "shared/nav", location: 'top'%>
 
     <!--If an user is logged in that inherits from the User class (not an OpenStruct -->
     <% if current_user.is_a?(User) %>
