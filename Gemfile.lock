@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/CClemensJr/kaimurai_copyright_tool
+  revision: 7d72d6b8afcf3657c72e65f5316215f205ebadd9
+  specs:
+    kaimurai_copyright_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -197,6 +203,7 @@ DEPENDENCIES
   friendly_id (~> 5.1.0)
   jbuilder (~> 2.5)
   jquery-rails
+  kaimurai_copyright_tool!
   listen (>= 3.0.5, < 3.2)
   pg (~> 0.18)
   pry-byebug

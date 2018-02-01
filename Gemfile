@@ -56,3 +56,4 @@ gem 'devise', '~> 4.4'
 
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
+gem 'kaimurai_copyright_tool', git: 'https://github.com/CClemensJr/kaimurai_copyright_tool'
