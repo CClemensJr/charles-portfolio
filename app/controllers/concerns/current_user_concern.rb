@@ -9,9 +9,18 @@ module CurrentUserConcern
   end
 
   def guest_user
-    OpenStruct.new(name: "Guest User",
-                            first_name: "Guest",
-                            last_name: "User",
-                            email: "guest_user@example.com")
+    # Refactor guest_user to take advantage of class methods instead of the OpenStruct which
+    # conflicted with the petergate gem
+    guest = GuestUser.new
+    guest.name = "Guest User"
+    guest.first_name = "Guest"
+    guest.last_name = "User"
+    guest.email = "guest@example.com"
+    guest
+
+    #OpenStruct.new(name: "Guest User",
+    #                        first_name: "Guest",
+    #                        last_name: "User",
+    #                        email: "guest_user@example.com")
   end
 end
