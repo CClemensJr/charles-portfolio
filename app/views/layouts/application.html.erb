@@ -20,12 +20,11 @@
       <!--Add a shoddy navbar to the site-->
       <%= render "shared/application_nav" %>
 
-      <%= login_helper %>
-
       <!--Page html slides into the yield param-->
       <%= yield %>
 
-      <%= copyright_generator %>
+      <%= render "shared/application_footer" %>
+
       <%= source_helper("application") %>
     </div>
   </body>
