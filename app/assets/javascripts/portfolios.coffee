@@ -1,3 +1,10 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+# Create variable without defining it
+ready = undefined
+
+# Call sortable method from html5sortable lib and assign it to the ready variable
+ready = ->
+  $('.sortable').sortable()
+  return
+
+# When the page loads pass ready function
+$(document).ready ready
