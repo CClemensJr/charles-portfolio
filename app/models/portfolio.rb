@@ -13,6 +13,10 @@ class Portfolio < ApplicationRecord
     where(subtitle: "Angular")
   end
 
+  def self.by_position
+    Portfolio.order("position ASC")
+  end
+
   #lambda
   scope :ruby_on_rails_portfolio_items, -> { where(subtitle: 'Ruby on Rails') }
 
