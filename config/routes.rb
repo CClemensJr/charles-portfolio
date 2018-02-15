@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   #Devise allows for custom routing! simply change the view name in the path_names hash
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register' }
 
+  resources :portfolios, except: [:show] do
+    put :sort, on: :collection
+  end
+
   get 'about-me', to: 'pages#about'
   get 'contact', to: 'pages#contact'
 
