@@ -1,0 +1,8 @@
+<!--The purpose of this partial is to return a growl-like response any time a flash response would normally show -->
+<% if flash[:alert] %>
+  <%= js add_gritter(flash[:alert], title: "Charles Clemens Portfolio", sticky: false, time: 3000) %>
+<% elsif flash[:error] %>
+  <%= js add_gritter(flash[:error], title: "Charles Clemens Portfolio", sticky: false, time: 3000) %>
+<% else flash[:notice] %>
+  <%= js add_gritter(flash[:notice], title: "Charles Clemens Portfolio", sticky: false, time: 3000) %>
+<% end %>
