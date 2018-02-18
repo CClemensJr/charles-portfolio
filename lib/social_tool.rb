@@ -9,7 +9,7 @@ module SocialTool
     end
 
     # Search for the 6 most recent tweets on rails
-    client.search("#rubyonrails", lang: "en", result_type: 'recent').take(6).collect do |tweet|
+    client.search("#rubyonrails", lang: 'en', result_type: 'recent').take(6).collect do |tweet|
       # And post the user name and tweet
       "#{tweet.user.screen_name}: #{tweet.text}"
     end
