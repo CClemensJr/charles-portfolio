@@ -15,6 +15,8 @@ Bundler.require(*Rails.groups)
 
 module CharleClemPortfolio
   class Application < Rails::Application
-
+    # Makes lib directory available to rest of Application
+    # config.eager_load_paths << "#{Rails.root}/lib"
+    config.eager_load_paths << Rails.root.join('lib')
   end
 end
