@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :comments
   #Devise allows for custom routing! simply change the view name in the path_names hash
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register' }
 

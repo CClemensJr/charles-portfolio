@@ -13,8 +13,12 @@ class User < ApplicationRecord
   # :timeoutable (Allows user to be logged out after a certain time) and :omniauthable (Allows third party logins like facebook or google)
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
   # Make sure the user enters a name
   validates_presence_of :name
+
+  has_many :comments, dependent: :destroy
+  
   def first_name
     self.name.split.first
   end

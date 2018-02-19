@@ -7,6 +7,8 @@ class Blog < ApplicationRecord
 
   belongs_to :topic
 
+  has_many :comments, dependent: :destroy
+
   # scopes for blog controller
   def self.special_blogs
     all
