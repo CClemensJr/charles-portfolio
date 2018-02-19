@@ -5,8 +5,10 @@
     <% @tweets.each do |tweet| %>
       <div class="col-md-6">
         <div class="tech-news">
-          <div class="card">
-            <%= twitter_parser tweet %>
+          <div class="card h-100">
+            <div class="card-block">
+              <%= twitter_parser tweet %>
+            </div>
           </div>
         </div>
       </div>
