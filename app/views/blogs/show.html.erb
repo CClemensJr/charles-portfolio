@@ -7,20 +7,9 @@
 
       <p><%= @blog.body %></p>
 
-      <% unless current_user.is_a? GuestUser %>
-        <%= form_with model: @comment, url: '#' do |form| %>
-          <div class="form-group">
-            <%= form.text_area :content, class: 'form-control', placeholder: 'Your comment' %>
-          </div>
-
-          <%= form.submit 'Post Comment', class: "btn btn-primary" %>
-        <% end %>
-      <% end %>
-
-      <!-- Start of comments-->
+      <%= render 'comments/comment_form' %>
       <%= render @blog.comments %>
-      <!-- End of comments-->
-    </div><!-- /.blog-main -->
+    </div>
 
     <div class="col-md-4">
       <%= render 'shared/blog_sidebar' %>
