@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  resources :comments
-  #Devise allows for custom routing! simply change the view name in the path_names hash
+  # We are able to remove this resource because the websockets from ActionCable allows for sending and receiving of data
+  #resources :comments
+
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register' }
 
   resources :portfolios, except: [:show] do
@@ -20,6 +21,9 @@ Rails.application.routes.draw do
   resources :portfolios, except: [:show] #except allows the resources to be collected for all portfolio actions except show
   get 'angular-items', to: 'portfolios#angular'
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show' #assign a new path to the show action and rename the prefix
+
+  # Allows websocket connection to be created
+  mount ActionCable.server => '/cable'
 
   root to: 'pages#home'
 end
