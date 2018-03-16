@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :topics, only: [:index, :show, :new, :edit]
+
   # We are able to remove this resource because the websockets from ActionCable allows for sending and receiving of data
   #resources :comments
 

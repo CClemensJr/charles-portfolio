@@ -3,6 +3,7 @@
     <div class="row flex-nowrap justify-content-between align-items-center">
       <div class="col-4 pt-1">
         <%= link_to 'Write a new Blog', new_blog_path if logged_in?(:site_admin) %>
+        <%= link_to 'Check out some other topics', topics_path %>
       </div>
       <div class="col-4 text-center">
         <a class="blog-header-logo text-dark" href="#">The Charletan</a>
